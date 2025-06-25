@@ -2,6 +2,11 @@ const mongoose = require('mongoose')
 
 // Creating mongoose schema
 const userSchema = new mongoose.Schema({
+    userID: {
+        type: String,
+        required: [true, "A user must have an ID!"]
+    },
+
     userName: {
         type: String,
         required: [true, 'A user must have a name!']
